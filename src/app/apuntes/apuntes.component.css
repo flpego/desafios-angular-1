@@ -1,0 +1,21 @@
+.green {
+    color: green;
+}
+
+.red{
+    color: firebrick;
+}
+
+.code-style {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-weight: bold;
+}
+
+.span-orange {
+    color: orangered;
+}
+
+.underline {
+    text-decoration: line-through;
+}

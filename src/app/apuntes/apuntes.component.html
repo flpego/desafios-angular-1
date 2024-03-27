@@ -1,0 +1,32 @@
+<h1>Apuntes clase {{ title }}</h1>
+
+<main>
+  <section>
+    <h2>Directivas de Atributo []</h2>
+    <article>
+      <h4>Ejemplo:</h4>
+      <p [ngClass]="hasError ? 'green' : 'red'">
+        Este parrafo tiene directiva de atributo
+        <span class="code-style">
+          [<span class="span-orange">ngClass</span>]="<span class="span-orange"
+            >hasError</span
+          >
+          ? 'green' : 'red'"
+        </span>
+        que aplica una clase condicionalmente con operador ternario
+      </p>
+
+      <button (click)="changeValue()" (click)="changeColor()">
+        Change {{ colorRed ? "red" : colorGreen }}
+      </button>
+    </article>
+  </section>
+  <section>
+    <h4>To Do List Simulacion</h4>
+    <button (click)="createList()">Crear Lista</button>
+    <button (click)="deleteList()">Borrar Lista</button>
+    <ul *ngFor="let item of listArr ">
+        <li [ngClass]="item.end? 'underline' : ''">{{listArr ?  item.taskName : ""}} <button (click)="item.endTask()">End</button></li>
+    </ul>
+  </section>
+</main>
